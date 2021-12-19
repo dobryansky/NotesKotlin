@@ -31,6 +31,7 @@ class NotesDiffUtil(
             oldList[oldItemPosition].date != newList[newItemPosition].date -> {
                 false
             }
+
             oldList[oldItemPosition].description != newList[newItemPosition].description -> {
                 false
             }

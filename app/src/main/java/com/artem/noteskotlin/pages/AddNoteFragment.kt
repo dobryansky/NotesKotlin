@@ -14,6 +14,10 @@ import com.artem.noteskotlin.data.DataBase
 import com.artem.noteskotlin.data.Note
 import com.artem.noteskotlin.databinding.FragmentAddNoteBinding
 import com.artem.noteskotlin.databinding.FragmentListBinding
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import java.util.*
 import kotlin.random.Random
 
@@ -75,7 +79,12 @@ class AddNoteFragment : Fragment() {
                 )
                 dpd.show()
             }
-
+            Glide.with(imageAddNote)
+                .load("https://picsum.photos/100")
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .apply(RequestOptions.bitmapTransform( RoundedCorners(20)))
+                .skipMemoryCache(true)
+                .into(imageAddNote);
 
         }
 
