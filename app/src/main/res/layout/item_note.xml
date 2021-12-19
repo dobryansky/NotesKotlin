@@ -23,16 +23,28 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/noteName"
+                android:id="@+id/id_note"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Название заметки"
+                android:layout_marginTop="10dp"
+                android:text="#74358743587384758"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/noteName"
                 app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
                 app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/noteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Название заметки"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/id_note"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                tools:layout_editor_absoluteY="15dp" />
 
             <TextView
                 android:id="@+id/noteDate"
@@ -51,7 +63,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/black"
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guidelineRight"

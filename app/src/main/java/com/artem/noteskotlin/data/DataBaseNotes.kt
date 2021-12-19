@@ -10,7 +10,6 @@ object DataBase {
         notes = notes + listOf(note)
     }
 
-
     fun clear() {
         notes = emptyList()
     }
