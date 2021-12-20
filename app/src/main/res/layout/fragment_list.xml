@@ -13,6 +13,7 @@
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal|top"
         android:textSize="30sp"
+        android:visibility="gone"
         android:text="Заметок ещё нет:((( \n Добавьте заметки"/>
 
     <androidx.recyclerview.widget.RecyclerView
